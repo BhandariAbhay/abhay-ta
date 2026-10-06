@@ -71,15 +71,28 @@ export const services = [
   },
 ]
 
+export const facts = [
+  { label: 'Experience', value: '2 years' },
+  { label: 'Devices installed', value: '3,000+' },
+  { label: 'Based in', value: 'Ahmedabad, India' },
+  { label: 'Education', value: 'B.Tech, Information Technology' },
+  { label: 'Focus', value: 'Attendance, access control & payroll' },
+  { label: 'Works on', value: 'Windows, SQL' },
+]
+
 export const capabilities = [
   'eSSL',
   'Smart Office',
   'Biomax',
+  'Timewatch',
+  'Mantra',
   'Keka',
-  'Zoho',
   'Weekmate',
-  'Biometric devices',
+  'Zoho',
+  'greytHR',
+  'Darwinbox',
+  'Factohr',
+  'SQL',
+  'Boom barriers',
   'Access control',
-  'Networking',
-  'Client support',
 ]
