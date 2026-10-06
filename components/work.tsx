@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { ArrowUpRight } from 'lucide-react'
 import { projects, type Project } from '@/lib/portfolio'
 import { SectionHeading } from '@/components/section-heading'
 
@@ -15,40 +14,8 @@ export function Work() {
             </li>
           ))}
         </ul>
-        <OtherBusinessCard />
       </div>
     </section>
-  )
-}
-
-function OtherBusinessCard() {
-  return (
-    <aside
-      aria-labelledby="other-business-heading"
-      className="mt-24 flex flex-col gap-8 rounded-lg border bg-card p-8 md:flex-row md:items-end md:justify-between md:p-12"
-    >
-      <div className="max-w-2xl">
-        <p className="font-mono text-xs text-accent">Other business</p>
-        <h3 id="other-business-heading" className="mt-4 font-serif text-3xl tracking-tight text-balance md:text-4xl">
-          Running a different kind of business?
-        </h3>
-        <p className="mt-4 leading-relaxed text-muted-foreground text-pretty">
-          {
-            "Whether you're an office, factory, school, hospital or retail store, if your setup needs IT support beyond what's listed here, tell me what you need and I'll help you find the right solution."
-          }
-        </p>
-      </div>
-      <a
-        href="#contact"
-        className="group inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-accent hover:text-accent-foreground md:self-auto"
-      >
-        Discuss your requirement
-        <ArrowUpRight
-          aria-hidden="true"
-          className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-        />
-      </a>
-    </aside>
   )
 }
 

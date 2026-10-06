@@ -10,7 +10,7 @@ export function Contact() {
   return (
     <section id="contact" className="scroll-mt-16 bg-primary text-primary-foreground">
       <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
-        <p className="font-mono text-xs text-accent">03 — Contact</p>
+        <p className="font-mono text-xs text-accent">04 — Contact</p>
         <h2 className="mt-6 max-w-3xl font-serif text-5xl leading-[1.05] tracking-tight text-balance md:text-7xl">
           Need a system installed or fixed? <em className="text-accent">Let&apos;s talk.</em>
         </h2>
