@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { capabilities, experience, profile } from '@/lib/portfolio'
+import { capabilities, services, profile } from '@/lib/portfolio'
 import { SectionHeading } from '@/components/section-heading'
 
 export function About() {
@@ -11,8 +11,8 @@ export function About() {
         <div className="mt-16 grid gap-12 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] md:gap-16">
           <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
             <Image
-              src="/portrait.png"
-              alt={`Portrait of ${profile.name}`}
+              src="/workbench.png"
+              alt={`${profile.name}'s field kit: a biometric device, RFID cards and installation tools`}
               fill
               sizes="(min-width: 768px) 40vw, 100vw"
               className="object-cover"
@@ -22,32 +22,28 @@ export function About() {
           <div className="flex flex-col gap-12">
             <div className="flex flex-col gap-5 text-lg leading-relaxed text-pretty">
               <p>
-                For the past eight years I&apos;ve worked at the intersection of design and engineering —
-                sketching flows in the morning and shipping them to production by evening.
+                I&apos;m an IT engineer in Ahmedabad. I handle the whole lifecycle of workplace
+                attendance and access systems, from mounting the device on the wall to making sure
+                salaries come out right at the end of the month.
               </p>
               <p className="text-muted-foreground">
-                I believe the best interfaces get out of the way. My process is collaborative and
-                iterative: understand the problem deeply, prototype early, and sweat the small details
-                that make software feel trustworthy.
+                Clients rely on me to get hardware, software and payroll talking to each other, and to
+                be there when something needs fixing. I focus on clean installations, clear
+                configuration and fast, friendly support.
               </p>
             </div>
 
             <div>
               <h3 className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-                Experience
+                What I do
               </h3>
               <ol className="mt-4 divide-y border-y">
-                {experience.map((item) => (
-                  <li
-                    key={item.company}
-                    className="grid gap-1 py-5 sm:grid-cols-[1fr_auto] sm:gap-x-6"
-                  >
-                    <p className="font-medium">
-                      {item.role} <span className="text-muted-foreground">at {item.company}</span>
+                {services.map((item, i) => (
+                  <li key={item.title} className="grid gap-1 py-5 sm:grid-cols-[auto_1fr] sm:gap-x-6">
+                    <p className="font-mono text-xs text-accent sm:row-span-2 sm:pt-1">
+                      {String(i + 1).padStart(2, '0')}
                     </p>
-                    <p className="font-mono text-xs text-muted-foreground sm:row-span-2 sm:pt-1">
-                      {item.period}
-                    </p>
+                    <p className="font-medium">{item.title}</p>
                     <p className="text-sm leading-relaxed text-muted-foreground">{item.description}</p>
                   </li>
                 ))}
@@ -56,7 +52,7 @@ export function About() {
 
             <div>
               <h3 className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-                Capabilities
+                Tools & platforms
               </h3>
               <ul className="mt-4 flex flex-wrap gap-2">
                 {capabilities.map((item) => (
