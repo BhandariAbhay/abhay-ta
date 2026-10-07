@@ -10,10 +10,10 @@ export function OtherBusiness() {
           <div className="max-w-2xl">
             <p className="font-mono text-xs text-accent">Business</p>
             <h3 id="business-name" className="mt-4 font-serif text-5xl tracking-tight text-balance md:text-6xl">
-              Pulkit Jain
+              Bhagya Shree Saree
             </h3>
             <p className="mt-6 leading-relaxed text-muted-foreground text-pretty">
-              {"Alongside my IT work, I'm also part of Pulkit Jain. For enquiries, get in touch and I'll connect you directly."}
+              {"Bhagya Shree Saree is a family-run store in Bhilwara offering sarees, lehengas, bridal wear and more. For enquiries, get in touch and I'll connect you directly."}
             </p>
           </div>
           <a
