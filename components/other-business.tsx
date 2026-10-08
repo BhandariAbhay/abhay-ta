@@ -17,8 +17,10 @@ export function OtherBusiness() {
             </p>
           </div>
           <a
-            href="#contact"
-            className="group inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-accent hover:text-accent-foreground md:self-auto"
+             href="https://share.google/aeZWls9KIbDn7BSb8"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-accent hover:text-accent-foreground md:self-auto"
           >
             Enquire now
             <ArrowUpRight
