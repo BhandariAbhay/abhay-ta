@@ -1,17 +1,18 @@
-
 import { SiteHeader } from '@/components/site-header'
 import { Hero } from '@/components/hero'
 import { Work } from '@/components/work'
+import { Products } from '@/components/products'
 import { About } from '@/components/about'
 import { Contact } from '@/components/contact'
 
-export default function HomePage() {
+export default function Page() {
   return (
     <>
       <SiteHeader />
       <main>
         <Hero />
         <Work />
+        <Products />
         <About />
         <Contact />
       </main>
