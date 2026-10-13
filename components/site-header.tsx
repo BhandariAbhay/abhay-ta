@@ -3,7 +3,6 @@ import { profile } from '@/lib/portfolio'
 const links = [
   { label: 'Work', href: '#work' },
   { label: 'About', href: '#about' },
-  { label: 'Business', href: '#business' },
   { label: 'Contact', href: '#contact' },
 ]
 
