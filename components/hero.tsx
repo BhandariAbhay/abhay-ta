@@ -32,7 +32,7 @@ export function Hero() {
       <h2 className="mt-5 text-xl font-medium tracking-tight md:text-2xl">
         {profile.role}
         <span className="text-muted-foreground">
-          {' '}— Biometric Systems, IT Support & Payroll Integration
+          {' '}— Biometric Systems, Attendance Software & Payroll Integration
         </span>
       </h2>
 
@@ -70,8 +70,8 @@ export function Hero() {
         {[
           'Biometric Attendance',
           'Access Control',
+          'Attendance Software',
           'SQL Server',
-          'Networking',
           'Payroll Integration',
         ].map((skill) => (
           <li
