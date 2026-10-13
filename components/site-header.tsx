@@ -1,9 +1,8 @@
-
 import { profile } from '@/lib/portfolio'
+import { ProductsMenu } from '@/components/products-menu'
 
 const links = [
   { label: 'Work', href: '#work' },
-  { label: 'Products', href: '#products' },
   { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -23,6 +22,9 @@ export function SiteHeader() {
 
         <nav aria-label="Primary navigation">
           <ul className="flex items-center gap-4 text-sm sm:gap-6">
+            <li>
+              <ProductsMenu />
+            </li>
             {links.map((link) => (
               <li key={link.href}>
                 <a
