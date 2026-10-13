@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import Link from 'next/link'
 import { ChevronDown } from 'lucide-react'
 import { productBrands } from '@/lib/products'
 
@@ -42,13 +43,13 @@ export function ProductsMenu() {
         <ul className="absolute left-0 top-full mt-3 w-44 rounded-lg border bg-card p-1 shadow-lg">
           {productBrands.map((brand) => (
             <li key={brand.id}>
-              <a
-                href={`#${brand.id}`}
+              <Link
+                href={`/products/${brand.id}`}
                 onClick={() => setOpen(false)}
                 className="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
               >
                 {brand.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
