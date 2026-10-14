@@ -1,56 +1,57 @@
 
-/* Subtle hero animations — no layout movement */
-@keyframes hero-fade-in {
-  from {
+/* Portfolio animations — safe, subtle, and layout-friendly */
+
+/* Smooth interactions without moving page elements */
+.hero-reveal,
+.terminal-line,
+.skill-chip {
+  opacity: 1;
+  transform: none;
+}
+
+.hero-reveal,
+.terminal-line,
+.skill-chip {
+  transition:
+    color 250ms ease,
+    border-color 250ms ease,
+    background-color 250ms ease;
+}
+
+/* Skill chip hover */
+.skill-chip:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Button and link hover transitions */
+.hero-reveal a {
+  transition:
+    color 250ms ease,
+    background-color 250ms ease,
+    border-color 250ms ease;
+}
+
+/* Terminal cursor */
+@keyframes terminal-blink {
+  50% {
     opacity: 0;
   }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.hero-reveal {
-  animation: hero-fade-in 500ms ease-out both;
-}
-
-.hero-delay-1 { animation-delay: 80ms; }
-.hero-delay-2 { animation-delay: 140ms; }
-.hero-delay-3 { animation-delay: 200ms; }
-.hero-delay-4 { animation-delay: 260ms; }
-.hero-delay-5 { animation-delay: 320ms; }
-.hero-delay-6 { animation-delay: 380ms; }
-.hero-delay-7 { animation-delay: 440ms; }
-
-/* Terminal effects, if these elements still exist */
-@keyframes terminal-fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.terminal-line {
-  animation: terminal-fade-in 350ms ease-out both;
-}
-
-@keyframes terminal-blink {
-  50% { opacity: 0; }
 }
 
 .terminal-cursor {
   animation: terminal-blink 1s steps(2, start) infinite;
 }
 
-/* Skill chips */
-.skill-chip {
-  animation: hero-fade-in 400ms ease-out both;
-}
-
-/* Accessibility */
+/* Respect accessibility preferences */
 @media (prefers-reduced-motion: reduce) {
   .hero-reveal,
   .terminal-line,
+  .skill-chip,
   .terminal-cursor,
-  .skill-chip {
+  .hero-reveal a {
     animation: none !important;
+    transition: none !important;
+    transform: none !important;
   }
 }
