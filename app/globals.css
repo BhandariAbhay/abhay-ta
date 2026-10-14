@@ -1,57 +1,115 @@
 
-/* Portfolio animations — safe, subtle, and layout-friendly */
+@import "tailwindcss";
 
-/* Smooth interactions without moving page elements */
-.hero-reveal,
-.terminal-line,
-.skill-chip {
-  opacity: 1;
-  transform: none;
+/* Existing cream and orange visual direction */
+:root {
+  --background: #f8f5ef;
+  --foreground: #29251f;
+  --card: #fffdf9;
+  --primary: #29251f;
+  --primary-foreground: #fffdf9;
+  --muted: #eee9e0;
+  --muted-foreground: #756e64;
+  --accent: #c96f3b;
+  --border: #e5ded3;
 }
 
-.hero-reveal,
-.terminal-line,
-.skill-chip {
+/* Base styles */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-instrument-serif);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist), Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  color: var(--foreground);
+  background: #ead0b9;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* Safe transitions: no positioning or layout changes */
+a,
+button,
+.skill-chip,
+.editorial-card {
   transition:
-    color 250ms ease,
-    border-color 250ms ease,
-    background-color 250ms ease;
+    color 220ms ease,
+    background-color 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
 }
 
-/* Skill chip hover */
 .skill-chip:hover {
+  border-color: var(--accent);
   color: var(--accent);
+}
+
+.editorial-card:hover {
   border-color: var(--accent);
 }
 
-/* Button and link hover transitions */
-.hero-reveal a {
-  transition:
-    color 250ms ease,
-    background-color 250ms ease,
-    border-color 250ms ease;
-}
-
-/* Terminal cursor */
-@keyframes terminal-blink {
-  50% {
-    opacity: 0;
-  }
-}
-
-.terminal-cursor {
-  animation: terminal-blink 1s steps(2, start) infinite;
-}
-
-/* Respect accessibility preferences */
+/* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
-  .hero-reveal,
-  .terminal-line,
-  .skill-chip,
-  .terminal-cursor,
-  .hero-reveal a {
-    animation: none !important;
-    transition: none !important;
-    transform: none !important;
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
