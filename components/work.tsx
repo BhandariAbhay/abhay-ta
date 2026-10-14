@@ -1,3 +1,6 @@
+import { SectionHeading } from '@/components/section-heading'
+import { ProjectCard } from '@/components/project-card'
+import { projects } from '@/lib/portfolio'
 
 export function Work() {
   return (
