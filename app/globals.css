@@ -1,20 +1,20 @@
 
 @import "tailwindcss";
 
-/* Existing cream and orange visual direction */
+/* Cream and orange portfolio theme */
 :root {
   --background: #f8f5ef;
   --foreground: #29251f;
   --card: #fffdf9;
-  --primary: #29251f;
-  --primary-foreground: #fffdf9;
+  --primary: #c96f3b;
+  --primary-foreground: #ffffff;
   --muted: #eee9e0;
   --muted-foreground: #756e64;
   --accent: #c96f3b;
   --border: #e5ded3;
 }
 
-/* Base styles */
+/* Tailwind CSS theme configuration */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -29,6 +29,7 @@
   --font-serif: var(--font-instrument-serif);
 }
 
+/* Global reset */
 * {
   box-sizing: border-box;
 }
@@ -47,11 +48,13 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Text selection */
 ::selection {
   color: var(--foreground);
   background: #ead0b9;
 }
 
+/* Links */
 a {
   color: inherit;
   text-decoration: none;
@@ -62,6 +65,7 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Responsive media */
 img,
 svg,
 video {
@@ -72,12 +76,13 @@ img {
   height: auto;
 }
 
+/* Keyboard accessibility */
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 4px;
 }
 
-/* Safe transitions: no positioning or layout changes */
+/* Smooth interactions without layout movement */
 a,
 button,
 .skill-chip,
@@ -89,11 +94,13 @@ button,
     box-shadow 220ms ease;
 }
 
+/* Skill chip hover */
 .skill-chip:hover {
   border-color: var(--accent);
   color: var(--accent);
 }
 
+/* Project card hover */
 .editorial-card:hover {
   border-color: var(--accent);
 }
