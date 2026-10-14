@@ -1,20 +1,17 @@
 
-/* Hero entrance animations */
-@keyframes hero-enter {
+/* Subtle hero animations — no layout movement */
+@keyframes hero-fade-in {
   from {
     opacity: 0;
-    transform: translateY(14px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
-/* Visible by default: animations are progressive enhancement */
 .hero-reveal {
-  animation: hero-enter 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: hero-fade-in 500ms ease-out both;
 }
 
 .hero-delay-1 { animation-delay: 80ms; }
@@ -25,26 +22,18 @@
 .hero-delay-6 { animation-delay: 380ms; }
 .hero-delay-7 { animation-delay: 440ms; }
 
-/* Terminal lines */
-@keyframes terminal-enter {
-  from {
-    transform: translateX(-6px);
-  }
-
-  to {
-    transform: translateX(0);
-  }
+/* Terminal effects, if these elements still exist */
+@keyframes terminal-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .terminal-line {
-  animation: terminal-enter 400ms ease-out both;
+  animation: terminal-fade-in 350ms ease-out both;
 }
 
-/* Terminal cursor */
 @keyframes terminal-blink {
-  50% {
-    opacity: 0;
-  }
+  50% { opacity: 0; }
 }
 
 .terminal-cursor {
@@ -53,21 +42,15 @@
 
 /* Skill chips */
 .skill-chip {
-  animation: hero-enter 450ms ease-out both;
+  animation: hero-fade-in 400ms ease-out both;
 }
 
-/* Subtle interaction effects */
-.skill-chip:hover {
-  border-color: var(--accent);
-}
-
-/* Accessibility: reduce motion when requested */
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   .hero-reveal,
   .terminal-line,
-  .skill-chip,
-  .terminal-cursor {
+  .terminal-cursor,
+  .skill-chip {
     animation: none !important;
-    transform: none !important;
   }
 }
