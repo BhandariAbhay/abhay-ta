@@ -1,5 +1,5 @@
 
-import { ArrowUpRight, Instagram } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { profile } from '@/lib/portfolio'
 
 const contactLinks = [
@@ -17,6 +17,25 @@ const contactLinks = [
     external: true,
   },
 ]
+
+function InstagramIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="size-6 shrink-0"
+    >
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
 
 export function Contact() {
   return (
@@ -39,16 +58,11 @@ export function Contact() {
             <li key={link.href}>
               <a
                 href={link.href}
-                target={'external' in link && link.external ? '_blank' : undefined}
-                rel={'external' in link && link.external ? 'noopener noreferrer' : undefined}
+                target={link.external ? '_blank' : undefined}
+                rel={link.external ? 'noopener noreferrer' : undefined}
                 className="group inline-flex items-center gap-3 border-b border-primary-foreground/30 pb-2 text-xl break-all transition-colors hover:border-accent hover:text-accent sm:text-2xl md:text-3xl"
               >
-                {link.label === 'Instagram' && (
-                  <Instagram
-                    aria-hidden="true"
-                    className="size-6 shrink-0"
-                  />
-                )}
+                {link.label === 'Instagram' && <InstagramIcon />}
 
                 {link.label}
 
@@ -63,8 +77,7 @@ export function Contact() {
 
         <footer className="mt-24 border-t border-primary-foreground/15 pt-8 text-sm">
           <p className="text-primary-foreground/50">
-            © {new Date().getFullYear()} {profile.name}.{' '}
-            {profile.location}.
+            © {new Date().getFullYear()} {profile.name}. {profile.location}.
           </p>
         </footer>
       </div>
