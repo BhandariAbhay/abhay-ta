@@ -17,12 +17,27 @@ export const productBrands: ProductBrand[] = [
   {
     id: 'essl',
     name: 'eSSL',
-    summary: 'Biometric devices, barriers and attendance software from eSSL.',
+    summary: 'Biometric devices, barriers, access control and software from eSSL.',
     products: [
       {
-        name: 'Biometric attendance devices',
-        description: 'Fingerprint and face recognition terminals for recording attendance.',
+        name: 'Fingerprint devices',
+        description: 'Fingerprint terminals for recording employee attendance.',
         details: ['Installation and employee enrolment'],
+      },
+      {
+        name: 'Face recognition devices',
+        description: 'Contactless face recognition terminals for attendance.',
+        details: ['Installation and employee enrolment'],
+      },
+      {
+        name: 'Face + Fingerprint devices',
+        description: 'Terminals that read both face and fingerprint.',
+        details: ['Installation and employee enrolment'],
+      },
+      {
+        name: 'Advanced AI biometric devices',
+        description: 'Newer AI-based biometric terminals for attendance and access.',
+        details: ['Installation and setup'],
       },
       {
         name: 'Boom and attendance barriers',
@@ -36,6 +51,15 @@ export const productBrands: ProductBrand[] = [
       {
         name: 'eSSL payroll software',
         description: 'Payroll that works with attendance data from eSSL devices.',
+      },
+      {
+        name: 'Downloads',
+        description: 'Software, drivers and manuals for eSSL devices.',
+      },
+      {
+        name: 'Access control systems',
+        description: 'Card and biometric door access, with locks, exit switches and controllers.',
+        details: ['Setup and configuration'],
       },
     ],
   },
